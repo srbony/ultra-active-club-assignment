@@ -3,11 +3,13 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Activity from '../Activity/Activity';
+import Cart from '../Cart/Cart';
 import './Activities.css';
 
 const Activities = () => {
 
     const [activities, setActivities] = useState([]);
+    const [cart, setCart] = useState([]);
 
 
     useEffect(() => {
@@ -19,6 +21,8 @@ const Activities = () => {
     }, [])
 
     const handleAddToCart = (activity) => {
+        const newCart = [...cart, activity];
+        setCart(newCart);
         console.log(activity);
     }
 
@@ -39,7 +43,7 @@ const Activities = () => {
                 }
             </div>
             <div className="cart-container">
-                <h2>this is cart</h2>
+                <Cart cart={cart}></Cart>
             </div>
 
         </div>

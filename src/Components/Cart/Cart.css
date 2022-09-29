@@ -1,0 +1,21 @@
+.cart-activity-time p {
+  background-color: cornflowerblue;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.activity-btn {
+  width: 100%;
+  background-color: cornflowerblue;
+  border: none;
+  padding: 10px;
+  border: none;
+
+
+}
+
+.cart {
+  position: sticky;
+  top: 0;
+}
