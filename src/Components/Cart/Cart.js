@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = ({ cart }) => {
 
@@ -9,13 +10,12 @@ const Cart = ({ cart }) => {
         total = total + activity.Time;
     }
 
-    // let total=0;
-    // for (activity of cart){
-    //     console.log(activity)
-    //     total=total+activity.Time;
+    const activityCompleted = () => {
+       console.log('clicked')
+
+    }
 
 
-    // }
     return (
         <div className='cart'>
             <div className='cart-activity-time'>
@@ -25,7 +25,7 @@ const Cart = ({ cart }) => {
 
             </div>
             <div className='activity-btn'>
-                <button>Activity Completed</button>
+                <button onClick={activityCompleted(cart.id)}>Activity Completed</button>
             </div>
 
 

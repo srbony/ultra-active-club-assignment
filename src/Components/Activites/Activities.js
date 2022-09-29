@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Activity from '../Activity/Activity';
 import Cart from '../Cart/Cart';
+import { addToDb } from '../Utilities/fakeDb';
 import './Activities.css';
 
 const Activities = () => {
@@ -23,7 +24,8 @@ const Activities = () => {
     const handleAddToCart = (activity) => {
         const newCart = [...cart, activity];
         setCart(newCart);
-        console.log(activity);
+        addToDb(activity.id);
+        // console.log(activity);
     }
 
 
