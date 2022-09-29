@@ -1,0 +1,17 @@
+
+.logo-container{
+    display:flex;
+    margin-top: 20px;
+}
+.logo-container img{
+    width:50px;
+    border-radius: 5;
+    margin-left: 100px;
+   
+
+}
+.title{
+    color: cornflowerblue;
+    font-weight: 800;
+   
+}
