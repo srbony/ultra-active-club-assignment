@@ -1,8 +1,11 @@
 import React from 'react';
 import './Cart.css'
 import { ToastContainer, toast } from 'react-toastify';
+import { useState } from 'react';
+
 
 const Cart = ({ cart }) => {
+
 
     // console.log(cart);
     let total = 0;
@@ -14,47 +17,45 @@ const Cart = ({ cart }) => {
         toast("Wow so easy!");
 
     }
+    const [brek, setBreak] = useState(0);
+    const handleBreak = (brek) => {
+
+        console.log(brek)
+
+
+    }
+
+
+
+
 
 
     return (
         <div className='cart'>
-            <div className='name'>
-                <h3>Morjina Sulthana</h3>
-                <div className='info'>
-                <div>
-                  <h5>weight<small>45kg</small></h5>
-                  
-                </div>
-                <div>
-                    <h5>Height <small>5</small> </h5>
-                </div>
-                
-                </div>
-                
+            <div>
+                <img src="" alt="" />
+                <h4>Morjina sultana</h4>
+                <p>Weight:45kg</p>
+                <p>Height:5</p>
 
             </div>
-            <div className='break-button'>
-
-                <button>10s</button>
-                <button>20s</button>
+            <div className='btn-container'>
+                <h5>Add a Break</h5>
+                <button onClick={handleBreak}>10s</button>
                 <button>20s</button>
                 <button>30s</button>
                 <button>40s</button>
-
-
+                <button>50s</button>
             </div>
-            <div className='cart-activity-time'>
-                <h3>Activity Details</h3>
+            <div>
+                <h5>Activity Details</h5>
                 <p>Activity time {total}Seconds</p>
-                <h4 className='cart-activity-time'>Break time</h4>
-                </div>
-                <div>
+                <p onClick={() => handleBreak}>Break time</p>
 
             </div>
-            
-
-
+            <button onClick={activityCompleted}>Activity Completed</button>
         </div>
+
     );
 };
 
