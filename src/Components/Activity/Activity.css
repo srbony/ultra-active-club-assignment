@@ -1,0 +1,46 @@
+.activity {
+    width: 300px;
+    height: 510px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    position: relative;
+}
+
+.activity img {
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.activity-name {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    font-style: 'normal';
+    margin-top: 5px;
+    margin-bottom: 3px;
+
+}
+
+.activity-info {
+    padding: 10px;
+
+}
+
+.activity-info p {
+    margin: 0;
+}
+
+.activity-btn {
+    width: 100%;
+    background-color: cornflowerblue;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+
+
+}
