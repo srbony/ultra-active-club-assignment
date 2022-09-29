@@ -5,6 +5,13 @@
   padding: 10px;
 }
 
+.cart-activity-time h4 {
+  background-color: cornflowerblue;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+
 .activity-btn {
   width: 100%;
   background-color: cornflowerblue;
@@ -18,4 +25,20 @@
 .cart {
   position: sticky;
   top: 0;
+}
+
+.break-button {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  border-radius: 5px;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+.name{
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
