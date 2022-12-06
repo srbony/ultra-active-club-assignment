@@ -1,19 +1,18 @@
 .activitys-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin-left: 5%;
 }
 
 .activity-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-
-
-
 }
-.cart-container{
+
+/* .cart-container{
    background-color: cornflowerblue;
-}
+} */
 
 @media screen and (Max-width:576px) {
     .activity-container {

@@ -1,8 +1,14 @@
-.cart-activity-time p {
+
+ 
+.activity-time{
   background-color: cornflowerblue;
   font-size: 15px;
   font-weight: 400;
   padding: 10px;
+   
+}
+.activity-time small{
+  margin-left: 20px;
 }
 
 .cart-activity-time h4 {
@@ -45,14 +51,34 @@
   margin-bottom: 5px;
 }
 
-.activity-btn {
+/* .activity-btn {
   padding: 10px 10px;
   border: none;
-}
-.cart{
+} */
+
+.cart {
   margin-left: 20px;
 }
-.btn-container{
+
+.btn-container {
   border: 0;
   border-radius: 50%;
+}
+
+.btn-container Button {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: cornflowerblue;
+}
+
+.activity-completed-btn {
+  border: none;
+  padding: 10px;
+  width: 50%;
+  background-color: cornflowerblue;
+  color: white;
+
 }

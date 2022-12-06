@@ -1,10 +1,16 @@
 import React from 'react';
-import './Cart.css'
-import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
+import './Cart.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+
+
 
 
 const Cart = ({ cart }) => {
+
+    const [data, setData] = useState(0);
 
 
     // console.log(cart);
@@ -12,23 +18,19 @@ const Cart = ({ cart }) => {
     for (const activity of cart) {
         total = total + activity.Time;
     }
+    //when get value fron input tag
+    // const getDataFromButton = (e) => {
+    //     setData(e.target.value);
+    // }
+    const getDataFromTag = (value) => {
+        // setData(e.target.value);
+        setData(value.target.innerText);
+    }
 
     const activityCompleted = () => {
-        toast("Wow so easy!");
-
+        toast("Activity Completed");
+       
     }
-    const [brek, setBreak] = useState(0);
-    const handleBreak = (brek) => {
-
-        console.log(brek)
-
-
-    }
-
-
-
-
-
 
     return (
         <div className='cart'>
@@ -41,19 +43,24 @@ const Cart = ({ cart }) => {
             </div>
             <div className='btn-container'>
                 <h5>Add a Break</h5>
-                <button onClick={handleBreak}>10s</button>
-                <button>20s</button>
-                <button>30s</button>
-                <button>40s</button>
-                <button>50s</button>
+
+                {/* <input type="text" value="10s" onClick={getDataFromButton} /> */}
+
+                <button onClick={getDataFromTag}> 10s</button>
+                <button onClick={getDataFromTag}> 20s</button>
+                <button onClick={getDataFromTag}> 30s</button>
+                <button onClick={getDataFromTag}> 40s</button>
+                <button onClick={getDataFromTag}> 50s</button>
+
+
             </div>
             <div>
                 <h5>Activity Details</h5>
-                <p>Activity time {total}Seconds</p>
-                <p onClick={() => handleBreak}>Break time</p>
+                <p className='activity-time'>Activity time <small>{total}Seconds</small></p>
+                <p className='activity-time'>Break time <small>{data}seconds</small> </p>
 
             </div>
-            <button onClick={activityCompleted}>Activity Completed</button>
+            <button className='activity-completed-btn' onClick={activityCompleted}>Activity Completed</button>
         </div>
 
     );

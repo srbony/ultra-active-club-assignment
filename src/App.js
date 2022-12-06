@@ -3,7 +3,7 @@
 import './App.css';
 import Activities from './Components/Activites/Activities';
 import Heder from './Components/Heder/Heder';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Answer from './Components/Answer/Answer';
 
@@ -14,6 +14,7 @@ function App() {
     <div >
       <Heder></Heder>
       <Activities></Activities>
+      <ToastContainer />
       <Answer></Answer>
 
 
